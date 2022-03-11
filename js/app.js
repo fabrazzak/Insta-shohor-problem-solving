@@ -142,7 +142,7 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
-    const productsContainer = document.getElementById( "posts" );
+    const  productsContainer = document.getElementById( "posts" );
     productsContainer.innerHTML = "";
   console.log(posts);
     posts.forEach((post) => {
@@ -153,7 +153,7 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
 
-    const likedPosts = getLikedPosts();
+    const  likedPosts = getLikedPosts();
     const previewliked= document.getElementById( "liked" );
     previewliked.innerHTML=`<h1>Liked posts</h1>`;
     likedPosts.forEach((post) => {
@@ -175,7 +175,7 @@ const displayReportedPosts = () => {
 
 const loadPosts = async () =>{
   let data = await fetch('../data/posts.json');
-  posts = await data.json();
+  posts = await data.json(); 
   showPosts(posts);
 }
 
